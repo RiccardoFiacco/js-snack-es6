@@ -29,5 +29,7 @@ const array = [
 const form = document.getElementById("form");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+    const name = document.getElementById("squad-name").value;
 
+    document.getElementById("squad-name").value = "";
 });
