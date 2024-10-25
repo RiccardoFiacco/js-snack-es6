@@ -25,3 +25,9 @@ const array = [
         falliSubiti : 0
     }
 ]
+
+const form = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+});
