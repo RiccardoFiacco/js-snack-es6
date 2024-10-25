@@ -19,11 +19,14 @@ const bikeArray = [
         peso:67
     }
 ]
-
-for(let key in bikeArray){
-    const app = bikeArray[key]; 
-    for(let key in app){
-        console.log(key);
-        console.log(app[key]);
+let max = 0;
+for(let i=0;i<bikeArray.length; i++){
+    const app = bikeArray[i].peso; 
+    console.log(app)
+    if(max<app){
+        max= app
     }
 }
+
+const msg = document.getElementById("print");
+msg.innerText = "il peso maggiore tra le bici è "+max;
