@@ -46,6 +46,9 @@ function givePoints(){
         }
     }
 }
+
+
+//MAIN CODE-----------------------------------------
 const array = [
     squadOne={
       nome : "",
@@ -70,8 +73,8 @@ const array = [
 ]
 
 const form = document.getElementById("form");
-
-
+const newArray = []
+let counter=0;
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     const name = document.getElementById("squad-name").value;
@@ -79,5 +82,20 @@ form.addEventListener("submit", function (event) {
     giveName(name);
     giveFouls();
     givePoints();
-    console.log(array);
+
+    counter++;
+
+    if(counter==4){
+        for(let i = 0; i<array.length; i++){
+            let obj= {
+                nome : array[i].nome,
+                falliSubiti :array[i].falliSubiti
+            }
+            newArray.push(obj);
+        }
+
+        for(let i = 0; i<newArray.length; i++){
+            console.log(newArray[i])
+        }
+    }
 });
